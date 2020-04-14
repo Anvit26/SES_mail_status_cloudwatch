@@ -43,20 +43,22 @@ Step 5) Testing
 		"X-SES-CONFIGURATION-SET: MYCONFIGSETNAME"
 		and Enter From And To 
 ========================================================================================================================================
-		X-SES-CONFIGURATION-SET: MYCONFIGSETNAME
-		From: SenderEmail@example.com
-		To: ReciverEmail@example.com
-		Subject: Test email
-		Content-Type: multipart/alternative;
-		    boundary="----=_boundary"
+X-SES-CONFIGURATION-SET: MYCONFIGSETNAME
+X-SES-MESSAGE-TAGS: Email=NULL
+From: dev1@electromech.info
+To: dev0@electromech.info
+Subject: Test email
+Content-Type: multipart/alternative;
+    boundary="----=_boundary"
 
-		------=_boundary
-		Content-Type: text/html; charset=UTF-8
-		Content-Transfer-Encoding: 7bit
+------=_boundary
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 7bit
 
-		This is a test email.
-		<a href="https://github.com/Anvit26/">Git Hub</a>
-		------=_boundary
+This is a test email.
+
+<a href="https://github.com/Anvit26/">Git Hub</a>
+------=_boundary
 ========================================================================================================================================
 		5.4.6) Press Send Mail
 		5.5.7) In Lambda Function Go To Monitoring And Press View Logs In CloudWatch To Watch data.
