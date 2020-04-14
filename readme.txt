@@ -8,7 +8,7 @@ Step 2) Create Lambda Function
         2.3) Enter Function - Your Lambda Function Name
         2.4) Select Runtime - Node.js
         2.5) Press Create Function
-	2.6) Past Code From Lambda Folder
+	2.6) Paste Code From Lambda Folder
 Step 3) Create Subscription in SNS 
         3.1) Go To SNS Console And Select Subscription
         3.2) Topic ARN - Copy ARN of SNS Topic Created in (Step 1)
