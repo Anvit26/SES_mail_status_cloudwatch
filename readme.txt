@@ -56,3 +56,7 @@ Step 5) Testing
 		This is a test email.
 		<a href="https://github.com/Anvit26/">Git Hub</a>
 		------=_boundary
+========================================================================================================================================
+		5.4.6) Press Send Mail
+		5.5.7) In Lambda Function Go To Monitoring And Press View Logs In CloudWatch To Watch data.
+		
