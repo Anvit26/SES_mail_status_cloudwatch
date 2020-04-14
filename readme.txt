@@ -1,14 +1,17 @@
 Step 1) Create SNS Topic In SNS Console 
-        1.1) Name- Your Topic Name
-        1.2) Display Name - Your Topic Name
-        1.3) Press Topic button Create Topic 
+	1.1) Go To SNS Console
+	1.2) From Left Navigation Bar Select Topic and Press Create Topic 
+        1.3) Name- Your Topic Name
+        1.4) Display Name - Your Topic Name
+        1.5) Press Topic button Create Topic 
 Step 2) Create Lambda Function
-        2.1) Press Creat Function
-        2.2) Select Author From Scratch
-        2.3) Enter Function - Your Lambda Function Name
-        2.4) Select Runtime - Node.js
-        2.5) Press Create Function
-	2.6) Paste Code From Lambda Folder
+	2.1) Go To Lambda Console
+        2.2) Press Creat Function
+        2.3) Select Author From Scratch
+        2.4) Function Name - Your Lambda Function Name
+        2.5) Runtime - Select Node.js
+        2.6) Press Create Function
+	2.7) Paste Code From Lambda/index.js
 Step 3) Create Subscription in SNS 
         3.1) Go To SNS Console And Select Subscription
         3.2) Topic ARN - Copy ARN of SNS Topic Created in (Step 1)
