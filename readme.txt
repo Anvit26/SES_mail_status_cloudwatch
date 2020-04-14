@@ -3,7 +3,7 @@ Step 1) Create SNS Topic In SNS Console
 	1.2) From Left Navigation Bar Select Topic and Press Create Topic 
         1.3) Name- Your Topic Name
         1.4) Display Name - Your Topic Name
-        1.5) Press Topic button Create Topic 
+        1.5) Press Create Topic button 
 Step 2) Create Lambda Function
 	2.1) Go To Lambda Console
         2.2) Press Creat Function
@@ -14,9 +14,10 @@ Step 2) Create Lambda Function
 	2.7) Paste Code From Lambda/index.js
 Step 3) Create Subscription in SNS 
         3.1) Go To SNS Console And Select Subscription
-        3.2) Topic ARN - Copy ARN of SNS Topic Created in (Step 1)
-        3.3) Protocol - Select Lambda In Protocol
-        3.4) EndPoint - Copy ARN Of Lambda Function Created In (Step 2)
+	3.2) Press Create Subscription Button
+        3.3) Topic ARN - Copy ARN of SNS Topic Created in (Step 1)
+        3.4) Protocol - Select Lambda In Protocol
+        3.5) EndPoint - Copy ARN Of Lambda Function Created In (Step 2)
 Step 4) Create Configuration Sets In  SES
         4.1) Go To SES Console and Select Configuration Sets from navigation bar
         4.2) Press Create Configuration Set
