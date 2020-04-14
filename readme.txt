@@ -33,22 +33,22 @@ Step 5) Testing
             5.4.1) Email Format - Select Raw
             5.4.2) From - Sender Email
             5.4.3) To - Reciver Email
-						5.4.5) Message 
-										In the below message Enter Your Configuration Set Name in header created in (step 4)
-										"X-SES-CONFIGURATION-SET: MYCONFIGSETNAME"
-										and Enter From And To 
+	    5.4.5) Message 
+	    	In the below message Enter Your Configuration Set Name in header created in (step 4)
+		"X-SES-CONFIGURATION-SET: MYCONFIGSETNAME"
+		and Enter From And To 
 ========================================================================================================================================
-										X-SES-CONFIGURATION-SET: MYCONFIGSETNAME
-												From: SenderEmail@example.com
-												To: ReciverEmail@example.com
-												Subject: Test email
-												Content-Type: multipart/alternative;
-														boundary="----=_boundary"
+		X-SES-CONFIGURATION-SET: MYCONFIGSETNAME
+		From: SenderEmail@example.com
+		To: ReciverEmail@example.com
+		Subject: Test email
+		Content-Type: multipart/alternative;
+		    boundary="----=_boundary"
 
-												------=_boundary
-												Content-Type: text/html; charset=UTF-8
-												Content-Transfer-Encoding: 7bit
+		------=_boundary
+		Content-Type: text/html; charset=UTF-8
+		Content-Transfer-Encoding: 7bit
 
-												This is a test email.
-												<a href="https://github.com/Anvit26/">Git Hub</a>
-												------=_boundary
+		This is a test email.
+		<a href="https://github.com/Anvit26/">Git Hub</a>
+		------=_boundary
