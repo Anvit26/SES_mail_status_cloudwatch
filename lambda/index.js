@@ -1,64 +1,43 @@
 'use strict';
 
-const AWS = require('aws-sdk');                                                 
+var aws = require('aws-sdk');
+var ses = new aws.SES({region: 'ap-south-1'});
 
-const ses = new AWS.SES();         
-
-exports.handler = async (event , context) => {
+exports.handler = (event, context, callback) => {
     
     var data = JSON.parse(JSON.stringify(event.Records));
     console.log(JSON.stringify(data));
+     
      var item = data[0];
      var sns = item.Sns;
-     console.log(sns);
-     
-     var SENDER = 'dev1@electromech.info';                                          
-
-
-        /*for (const record of event.Records) {
-        console.log('Received event:', event);
-        const sernderMail = record.dynamodb.Keys.userId.S;
-        console.log(sernderMail);
-        }*/
-    var senderMail =sns.Message ;
-    console.log(senderMail);
-    var obj = JSON.parse(senderMail);
-    var obj2 = obj.mail.source;
-    console.log(obj2);
-    //console.log(obj.mail.source);
-    //console.log(obj.bounce);
-        sendEmail(sns, function (err, data) {
-            context.done(err, null);
-        });
-        
-
-function sendEmail (obj2, done) {
+     var senderMail =sns.Message ;
+     console.log(senderMail);
+     var obj = JSON.parse(senderMail);
+     var smail = obj.mail.source;
+     console.log(smail);
     
-      var obj1 = obj2;
-      console.log(`${JSON.stringify(obj1)}`);
-      var smail = JSON.stringify(obj1.mail.Source);
-      
-    var params = {
+     var params = {
         Destination: {
-            ToAddresses: [
-                smail,
-            ]
+            ToAddresses: [smail]                                                //Reciver Mail-id
         },
         Message: {
             Body: {
-                Text: {
-                       Data: JSON.stringify(obj2) ,
-                        Charset: 'UTF-8' 
-                }
-            },
-            Subject: {
-                Data:  'Email Bounse',
-                Charset: 'UTF-8'
-            }
+                Text: { Data: JSON.stringify(obj) }                             //message body
+                },
+            
+            Subject: { Data: "Mail Bounce" }
         },
-        Source: SENDER
+        Source: "dev1@electromech.info"                                         //sender Mail-id
     };
-    ses.sendEmail(params, done);
-}
-     
+    
+     ses.sendEmail(params, function (err, data) {
+        callback(null, {err: err, data: data});
+        if (err) {
+            console.log(err);
+            context.fail(err);
+        } else {      
+            console.log(data);
+            context.succeed(event);
+        }
+    });
 };
