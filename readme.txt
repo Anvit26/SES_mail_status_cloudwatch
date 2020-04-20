@@ -44,9 +44,9 @@ Step 5) Testing
 		and Enter From And To 
 ========================================================================================================================================
 X-SES-CONFIGURATION-SET: MYCONFIGSETNAME
-X-SES-MESSAGE-TAGS: Email=NULL
 From: dev1@electromech.info
 To: dev0@electromech.info
+ReplyToAddresses: daveanvit@gmail.com
 Subject: Test email
 Content-Type: multipart/alternative;
     boundary="----=_boundary"
